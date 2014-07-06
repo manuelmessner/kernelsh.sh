@@ -6,7 +6,7 @@ VERBOSE=0
 
 while getopts "v" OPTIONS
 do
-    case $OPTIONS
+    case $OPTIONS in
         v)
             VERBOSE=1
             ;;
