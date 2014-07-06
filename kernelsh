@@ -2,7 +2,7 @@
 
 # Kernel framework.
 
-MY_DIR=$(dirname ${BASH_SOURCE[0]})
+MY_DIR=$(dirname $0)
 TOOLS_DIR=$MY_DIR/src
 
 cmd=$1; shift
