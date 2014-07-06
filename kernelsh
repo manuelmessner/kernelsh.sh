@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+# Kernel framework.
+
+MY_DIR=$(dirname ${BASH_SOURCE[0]})
+TOOLS_DIR=$MY_DIR/src
+
+cmd=$1; shift
+if [ -z $(ls $TOOLS_DIR | grep "${cmd}.sh") ]
+then
+    echo "No command ${cmd} found."
+    exit 1
+fi
+
+sh ${TOOLS_DIR}/${cmd}.sh $*
