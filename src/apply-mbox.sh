@@ -55,7 +55,7 @@ git checkout -b $tmp_branch
 for file in $(find $box -type f | sort)
 do
     output "Applying $file"
-    git am < $file
+    git am < $file || exit 1
 
     output "Removing $file"
     rm $file
