@@ -22,7 +22,8 @@ do
     case $OPTION in
         h)
             echo "$0 $PROG_NAME <mbox path> [options]"
-            echo "  -v | Be verbose"
+            echo "  -b <args>   | Call make afterwards, pass <args> to make"
+            echo "  -v          | Be verbose"
             exit 1
             ;;
         v)
