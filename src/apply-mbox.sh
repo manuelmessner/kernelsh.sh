@@ -31,6 +31,10 @@ do
     sleep 1
 done
 
+verbose() {
+    [[ $VERBOSE -eq 1 ]]
+}
+
 output() {
     verbose && echo -e "[$0]: $1"
 }
