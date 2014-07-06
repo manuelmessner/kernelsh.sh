@@ -14,8 +14,10 @@ then
 fi
 
 VERBOSE=0
+BUILD=0
+BUILD_ARG=
 
-while getopts "vh" OPTION
+while getopts "b:vh" OPTION
 do
     case $OPTION in
         h)
@@ -26,6 +28,11 @@ do
         v)
             VERBOSE=1
             ;;
+        b)
+            BUILD=1
+            BUILD_ARG=$OPTARG
+            ;;
+
     esac
 
     sleep 1
@@ -54,3 +61,9 @@ do
 done
 
 output "Done."
+
+if [ $BUILD -eq 1 ]
+then
+    output "Trying to build using 'make $BUILD_ARG'"
+    make $BUILD_ARG
+fi
