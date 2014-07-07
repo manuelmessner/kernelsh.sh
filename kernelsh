@@ -2,7 +2,11 @@
 
 # Kernel framework.
 
-MY_DIR="$(readlink -e $0)"
+# linux version
+# MY_DIR="$(dirname $(readlink -e $0))"
+# portable solution
+MY_DIR="$(cd $(dirname $0); pwd -P)"
+
 TOOLS_DIR="$MY_DIR/src"
 
 cmd=$1; shift
