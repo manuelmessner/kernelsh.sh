@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # apply patches from a mailbox onto the current branch (with creating a new one)
 
