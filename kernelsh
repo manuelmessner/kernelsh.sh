@@ -10,7 +10,7 @@ MY_DIR="$(cd $(dirname $0); pwd -P)"
 TOOLS_DIR="$MY_DIR/src"
 
 cmd=$1; shift
-if [[ -e ${TOOLS_DIR}/${cmd}.sh ]]
+if [[ ! -e ${TOOLS_DIR}/${cmd}.sh ]]
 then
     echo "No command ${cmd} found."
     exit 1

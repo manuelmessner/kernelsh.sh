@@ -2,8 +2,6 @@
 
 # apply patches from a mailbox onto the current branch (with creating a new one)
 
-PROG_NAME=apply-mbox
-
 box=$1
 shift
 
@@ -21,7 +19,7 @@ while getopts "b:vh" OPTION
 do
     case $OPTION in
         h)
-            echo "$0 $PROG_NAME <mbox path> [options]"
+            echo "kernelsh $(basename $0) <mbox path> [options]"
             echo "  -b <args>   | Call make afterwards, pass <args> to make"
             echo "  -v          | Be verbose"
             exit 1
