@@ -2,9 +2,6 @@
 
 # Kernel framework.
 
-# linux version
-# MY_DIR="$(dirname $(readlink -e $0))"
-# portable solution
 MY_DIR="$(cd $(dirname $0); pwd -P)"
 
 TOOLS_DIR="$MY_DIR/src"
@@ -16,4 +13,4 @@ then
     exit 1
 fi
 
-"${TOOLS_DIR}/${cmd}.sh" $*
+bash "${TOOLS_DIR}/${cmd}.sh" $*
