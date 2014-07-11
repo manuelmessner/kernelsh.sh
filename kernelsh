@@ -2,7 +2,7 @@
 
 # Kernel framework.
 
-MY_DIR="$(cd $(dirname $0); pwd -P)"
+MY_DIR="$(cd $(dirname $0); pwd)"
 
 TOOLS_DIR="$MY_DIR/src"
 
